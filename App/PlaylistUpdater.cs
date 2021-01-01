@@ -79,8 +79,9 @@ namespace PlaylistUpdater {
         }
         private void backupPlaylists() {
             Array.ForEach(playLists, path => {
+                string dateStamp = DateTime.Now.ToString("o").Substring(0, 16);
                 string filePath = Path.Join(resPath, System, "string", path);
-                string backupPath = Path.Join(resPath, System, "string", "_" + path);
+                string backupPath = Path.Join(resPath, System, "string", dateStamp + "_" + path);
                 File.Copy(filePath, backupPath, true);
             }); 
         }
