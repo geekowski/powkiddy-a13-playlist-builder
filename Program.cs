@@ -1,5 +1,4 @@
-﻿using System;
-using PlaylistUpdater;
+﻿using PlaylistUpdater;
 namespace powkiddy_games
 {
     class Program
